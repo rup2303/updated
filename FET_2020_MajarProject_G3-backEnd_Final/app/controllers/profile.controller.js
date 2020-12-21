@@ -1,15 +1,16 @@
 const db = require("../models");
-const { favourite } = require("../models");
-const Favourite = db.favourite;
+
 const { status } = require("../models");
 const Status = db.status;
-//Find All fav of user by userId
+const { score } = require("../models");
+const Score = db.score;
+//Find All complete quizes of user by userId
 exports.findAll = (req, res) => {
     const user_Id = req.params.id;
   
-    return Favourite.findAll({
-      include: ["quizs"],
-      where: { userId: user_Id, status: true }
+    return Score.findAll({
+      include: ["quizes"],
+      where: { userId: user_Id }
     }).then(data => {
       res.send(data);
     })

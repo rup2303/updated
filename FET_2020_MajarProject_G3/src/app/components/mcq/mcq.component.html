@@ -1,12 +1,12 @@
 <button class="btn btn-primary" (click)="quizlist()">Start Quiz </button>
 
-<div *ngIf="maxScorer" [hidden]='!enable'>
-  <h4>MaxScorer For this Quiz is
-  <label><strong>{{ userName }}</strong>
+<div class="maxScore" *ngIf="maxScorer" [hidden]='!enable'>
+  <h2>MaxScorer For this Quiz is 
+  <label><strong> {{ userName }} </strong>
     
-    Highest score is :- {{ maxScorer }}
+    scored:- {{ maxScorer }}
 </label>
-</h4>
+</h2>
 </div>
 <br><br>
 <div *ngIf="!maxScorer" class="edit-form">

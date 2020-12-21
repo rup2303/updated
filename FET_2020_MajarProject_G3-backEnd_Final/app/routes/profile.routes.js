@@ -4,7 +4,7 @@ module.exports = (app) => {
     var router = require("express").Router();
   
 
- //Retrieve all Favourite
+ //Retrieve all complete quizes
  router.get("/:id", profile.findAll);
 
  // Retrieve all incomplete quizes

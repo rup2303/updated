@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class ProfileComponent implements OnInit {
 quizList:any;
-  favList:any;
+  completeQuizList:any;
   userId:any;
   user:any;
   constructor( private router: Router
@@ -35,8 +35,8 @@ quizList:any;
 
   getFavList(){
     this.profileService.getFavListOfUser(this.userId).subscribe((res: any) => {
-      this.favList=res;
-      console.log(this.favList);
+      this.completeQuizList=res;
+      console.log(this.completeQuizList);
       
     })
   }
